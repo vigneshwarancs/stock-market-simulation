@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote history
+{% endblock %}
+
+{% block main %}
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <table  class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <tr>
+            <th class="th-sm"> Open </th>
+            <th class="th-sm"> High </th>
+            <th class="th-sm"> Low </th>
+            <th class="th-sm"> Close</th>
+            <th class="th-sm"> Volume</th>
+
+        </tr>
+        <tr>
+          <td> {{ Open }} </td>
+          <td> {{ High }} </td>
+          <td> {{ Low }} </td>
+          <td> {{ Close }} </td>
+          <td> {{ Volume }} </td>
+
+
+          </tr>
+    </table>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transfer Cash to bank account
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('transfer') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                Routing Number :<input autocomplete="off" autofocus class="form-control" name="routing" placeholder="Bank Routing Number" type="number"/>
+            </div>
+            <div class="form-group">
+                Account Number :<input autocomplete="off" autofocus class="form-control" name="account" placeholder="Bank Account Number" type="number"/>
+            </div>
+            <div class="form-group">
+                Cash to be transfered :<input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Amount" type="number"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Transfer</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

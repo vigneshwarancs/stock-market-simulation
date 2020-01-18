@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add a Bank Account
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('addCard') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="routing" placeholder="Bank Routing Number" type="number"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="account" placeholder="Bank Account Number" type="number"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Bank Balance" type="number" step="0.01"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="Add">Register</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
